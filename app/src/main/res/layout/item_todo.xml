@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/times_list">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "Date:"
+        android:paddingBottom = "2dp"/>
+
+    <TextView
+        android:id="@+id/date_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize = "18dp"
+        android:paddingBottom = "5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "Clock In:"
+        android:paddingBottom = "2dp"/>
+
+    <TextView
+        android:id="@+id/timeIn_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize = "18dp"
+        android:paddingBottom = "5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "Clock Out:"/>
+    <TextView
+        android:id="@+id/timeOut_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize = "18dp"
+        android:paddingBottom = "5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "Notes:"/>
+    <TextView
+        android:id="@+id/notes_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize= "12dp"/>
+
+
+
+</LinearLayout>
