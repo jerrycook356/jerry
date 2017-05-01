@@ -10,7 +10,7 @@ public class Record {
     private String notes;
     private String date;
 
-    public Record(String timeIn, String timeOut, String notes,String date){
+    public Record(String date, String timeIn, String timeOut,String notes){
         this.timeIn= timeIn;
         this.timeOut= timeOut;
         this.notes = notes;
