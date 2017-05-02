@@ -25,6 +25,7 @@ public class MyCursorAdaper extends CursorAdapter {
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         return LayoutInflater.from(context).inflate(R.layout.item_todo, parent, false);
+
     }
 
     @Override
@@ -45,6 +46,8 @@ public class MyCursorAdaper extends CursorAdapter {
         timein.setText(getTimein);
         timeout.setText(getTimeout);
         notess.setText(getnotes);
+
+
 
     }
 

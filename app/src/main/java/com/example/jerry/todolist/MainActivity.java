@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView mTaskListView;
     private static final int TIME_ENTRY = 1;
     public Cursor cursor;
+    public MyCursorAdaper adaper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +41,9 @@ public class MainActivity extends AppCompatActivity {
         mHelper = new TaskDbHelper(this);
         //retrieve();
         cursor = mHelper.getTimeRecordsList();
-        MyCursorAdaper adaper = new MyCursorAdaper(this,cursor);
+        adaper = new MyCursorAdaper(this,cursor);
         ListView lV = (ListView) findViewById(R.id.list_todo);
         lV.setAdapter(adaper);
-
-
-
 
     }
 
@@ -77,7 +75,10 @@ public class MainActivity extends AppCompatActivity {
                 String timeOut = data.getStringExtra("timeout");
                 String notes = data.getStringExtra("notes");
                 String date = data.getStringExtra("date");
+                adaper.notifyDataSetChanged();
                 mHelper.saveTimeRecord(date, timeIn, timeOut, notes);
+
+
 
 
             }

@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.jerry.todolist.MyCursorAdaper;
+
 /**
  * Created by jerry on 4/27/2017.
  */
@@ -39,7 +41,6 @@ public class TaskDbHelper extends SQLiteOpenHelper {
         }
 
 
-
     public void saveTimeRecord(String date,String timeIn, String timeOut,String notes){
 
         database= this.getWritableDatabase();
@@ -50,11 +51,11 @@ public class TaskDbHelper extends SQLiteOpenHelper {
         contentValues.put(TIMETRACKER_COLUMN_NOTES,notes);
         database.insert(TABLE_NAME,null,contentValues);
 
+
     }
     public Cursor getTimeRecordsList(){
         database = this.getReadableDatabase();
         return  database.rawQuery("select * from " + TABLE_NAME, null);
-
 
 
     }

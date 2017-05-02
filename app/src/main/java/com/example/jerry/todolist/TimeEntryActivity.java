@@ -14,6 +14,7 @@ public class TimeEntryActivity extends Activity {
 
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.xml.fadein, R.xml.fadeout);
         setContentView(R.layout.entry_form);
     }
 
@@ -29,8 +30,10 @@ public class TimeEntryActivity extends Activity {
         intent.putExtra("notes",notesView.getText().toString());
         this.setResult(RESULT_OK, intent);
         finish();
+        overridePendingTransition(R.xml.fadein, R.xml.fadeout);
     }
     public void onCancel(View view){
         finish();
+        overridePendingTransition(R.xml.fadein, R.xml.fadeout);
     }
 }
