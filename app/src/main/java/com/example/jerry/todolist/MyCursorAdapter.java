@@ -16,10 +16,10 @@ import static android.R.attr.priority;
  * Created by jerry on 5/1/2017.
  */
 
-public class MyCursorAdaper extends CursorAdapter {
+public class MyCursorAdapter extends CursorAdapter {
 
-        public MyCursorAdaper(Context context, Cursor cursor) {
-            super(context, cursor, 0);
+        public MyCursorAdapter(Context context, Cursor cursor) {
+            super(context, cursor, 2);
         }
 
     @Override

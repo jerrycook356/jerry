@@ -6,8 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.jerry.todolist.MyCursorAdaper;
-
 /**
  * Created by jerry on 4/27/2017.
  */
@@ -22,6 +20,7 @@ public class TaskDbHelper extends SQLiteOpenHelper {
     public static final String TIMETRACKER_COLUMN_TIME_OUT="timeout";
     public static final String TIMETRACKER_COLUMN_NOTES="notes";
     private SQLiteDatabase database;
+
 
     public TaskDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
